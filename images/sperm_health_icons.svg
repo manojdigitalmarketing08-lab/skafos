@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="220" viewBox="0 0 700 220">
+  <style>
+    .label {
+      font-family: Arial, sans-serif;
+      font-size: 24px;
+      fill: #0b4258;
+      font-weight: bold;
+    }
+    .small {
+      font-family: Arial, sans-serif;
+      font-size: 20px;
+      fill: #0b4258;
+    }
+  </style>
+
+  <!-- Group 1 -->
+  <g transform="translate(40,20)">
+    <circle cx="80" cy="80" r="70" fill="#0b4258"/>
+    <path d="M80 10 A70 70 0 0 1 80 150 L80 80 Z" fill="#041f2b"/>
+
+    <!-- sperm left -->
+    <g fill="#ffffff" stroke="#ffffff" stroke-width="2">
+      <circle cx="40" cy="50" r="4"/>
+      <path d="M40 54 q-8 10 0 20 q8 10 0 20"/>
+
+      <circle cx="55" cy="35" r="4"/>
+      <path d="M55 39 q-8 10 0 20 q8 10 0 20"/>
+
+      <circle cx="30" cy="90" r="4"/>
+      <path d="M30 94 q-8 10 0 20 q8 10 0 20"/>
+
+      <circle cx="65" cy="95" r="4"/>
+      <path d="M65 99 q-8 10 0 20 q8 10 0 20"/>
+    </g>
+
+    <!-- dividing line -->
+    <line x1="80" y1="15" x2="80" y2="145" stroke="#ffffff" stroke-width="3"/>
+
+    <!-- single sperm right -->
+    <g fill="#ffffff" stroke="#ffffff" stroke-width="3">
+      <ellipse cx="110" cy="70" rx="7" ry="12"/>
+      <path d="M110 82 q10 20 -5 35 q-10 15 5 30"/>
+    </g>
+
+    <text x="80" y="185" text-anchor="middle" class="label">Quantity</text>
+  </g>
+
+  <!-- Group 2 -->
+  <g transform="translate(260,20)">
+    <circle cx="80" cy="80" r="70" fill="#0b4258"/>
+    <path d="M80 10 A70 70 0 0 1 80 150 L80 80 Z" fill="#041f2b"/>
+
+    <!-- healthy sperm -->
+    <g fill="#ffffff" stroke="#ffffff" stroke-width="3">
+      <ellipse cx="55" cy="70" rx="7" ry="12"/>
+      <path d="M55 82 q10 20 -5 35 q-10 15 5 30"/>
+
+      <ellipse cx="110" cy="70" rx="7" ry="12"/>
+      <path d="M110 82 q10 20 -5 35 q-10 15 5 30"/>
+    </g>
+
+    <line x1="80" y1="15" x2="80" y2="145" stroke="#ffffff" stroke-width="3"/>
+
+    <text x="80" y="185" text-anchor="middle" class="label">Motility</text>
+  </g>
+
+  <!-- Group 3 -->
+  <g transform="translate(480,20)">
+    <circle cx="80" cy="80" r="70" fill="#0b4258"/>
+    <path d="M80 10 A70 70 0 0 1 80 150 L80 80 Z" fill="#041f2b"/>
+
+    <!-- normal sperm -->
+    <g fill="#ffffff" stroke="#ffffff" stroke-width="3">
+      <ellipse cx="55" cy="70" rx="7" ry="12"/>
+      <path d="M55 82 q10 20 -5 35 q-10 15 5 30"/>
+    </g>
+
+    <!-- abnormal sperm -->
+    <g fill="none" stroke="#ffffff" stroke-width="3">
+      <path d="M110 60 q20 10 0 20 q-20 10 0 20 q20 10 0 20"/>
+    </g>
+
+    <line x1="80" y1="15" x2="80" y2="145" stroke="#ffffff" stroke-width="3"/>
+
+    <text x="80" y="185" text-anchor="middle" class="label">Morphology</text>
+  </g>
+</svg>

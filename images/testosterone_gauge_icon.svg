@@ -1,0 +1,32 @@
+<svg width="256" height="256" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a4f87"/>
+      <stop offset="100%" stop-color="#0d5e9e"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Outer circle -->
+  <circle cx="128" cy="128" r="120" fill="url(#bg)" stroke="#0a4f87" stroke-width="6"/>
+
+  <!-- Inner gauge -->
+  <path d="M40 140 A88 88 0 0 1 216 140" fill="none" stroke="#ffffff" stroke-width="8" stroke-dasharray="6 6"/>
+
+  <!-- Labels -->
+  <text x="38" y="150" font-size="24" fill="#ffffff" font-family="Arial" font-weight="bold">Low</text>
+  <text x="176" y="150" font-size="24" fill="#ffffff" font-family="Arial" font-weight="bold">High</text>
+
+  <!-- Needle -->
+  <line x1="128" y1="128" x2="84" y2="112" stroke="#9fb4c6" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="128" cy="128" r="8" fill="#d4201f"/>
+
+  <!-- Bottom panel -->
+  <path d="M60 168 Q128 120 196 168 L180 218 Q128 238 76 218 Z"
+        fill="#c9c9c9" stroke="#8f8f8f" stroke-width="2"/>
+
+  <!-- Bottom text -->
+  <text x="128" y="185" text-anchor="middle" font-size="24" fill="#000000"
+        font-family="Arial" font-weight="bold">Testosterone</text>
+  <text x="128" y="212" text-anchor="middle" font-size="24" fill="#000000"
+        font-family="Arial" font-weight="bold">Level</text>
+</svg>

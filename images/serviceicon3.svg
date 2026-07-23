@@ -1,0 +1,26 @@
+<svg width="220" height="170" viewBox="0 0 220 170" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Axes -->
+  <path d="M20 140H190V20" stroke="black" stroke-width="8" stroke-linecap="square"></path>
+
+  <!-- Circle 1 -->
+  <circle cx="40" cy="110" r="14" stroke="black" stroke-width="3" fill="white"></circle>
+  <line x1="40" y1="96" x2="40" y2="70" stroke="black" stroke-width="3"></line>
+  <polygon points="40,56 30,72 50,72" fill="black"></polygon>
+
+  <!-- Circle 2 -->
+  <circle cx="85" cy="110" r="14" stroke="black" stroke-width="3" fill="white"></circle>
+  <line x1="85" y1="96" x2="85" y2="50" stroke="black" stroke-width="3"></line>
+  <polygon points="85,36 75,52 95,52" fill="black"></polygon>
+
+  <!-- Circle 3 -->
+  <circle cx="130" cy="110" r="14" stroke="black" stroke-width="3" fill="white"></circle>
+  <line x1="130" y1="96" x2="130" y2="40" stroke="black" stroke-width="3"></line>
+  <polygon points="130,26 120,42 140,42" fill="black"></polygon>
+
+  <!-- Circle 4 -->
+  <circle cx="175" cy="110" r="14" stroke="black" stroke-width="3" fill="white"></circle>
+  <line x1="175" y1="96" x2="175" y2="22" stroke="black" stroke-width="3"></line>
+  <polygon points="175,4 163,26 187,26" fill="black"></polygon>
+
+</svg>

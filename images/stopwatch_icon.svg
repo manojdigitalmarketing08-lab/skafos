@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <defs>
+    <radialGradient id="metal" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#f5f5f5"/>
+      <stop offset="60%" stop-color="#cfd8dc"/>
+      <stop offset="100%" stop-color="#90a4ae"/>
+    </radialGradient>
+
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#d8a020"/>
+      <stop offset="100%" stop-color="#8c5d00"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Stopwatch body -->
+  <circle cx="128" cy="138" r="96" fill="url(#metal)" stroke="#5f6b73" stroke-width="5"/>
+
+  <!-- Top button -->
+  <rect x="112" y="6" width="32" height="36" rx="8" fill="url(#metal)" stroke="#5f6b73" stroke-width="4"/>
+
+  <!-- Left button -->
+  <g transform="rotate(-35 60 40)">
+    <rect x="45" y="20" width="24" height="42" rx="6" fill="url(#metal)" stroke="#5f6b73" stroke-width="3"/>
+  </g>
+
+  <!-- Right button -->
+  <g transform="rotate(35 196 40)">
+    <rect x="184" y="20" width="24" height="42" rx="6" fill="url(#metal)" stroke="#5f6b73" stroke-width="3"/>
+  </g>
+
+  <!-- Inner dial -->
+  <circle cx="128" cy="138" r="78" fill="#eef2f3" stroke="#5f6b73" stroke-width="3"/>
+
+  <!-- Minute marks -->
+  <g stroke="#444" stroke-width="2">
+    <line x1="128" y1="68" x2="128" y2="78"/>
+    <line x1="178" y1="82" x2="172" y2="90"/>
+    <line x1="198" y1="138" x2="188" y2="138"/>
+    <line x1="178" y1="194" x2="172" y2="186"/>
+    <line x1="128" y1="208" x2="128" y2="198"/>
+    <line x1="78" y1="194" x2="84" y2="186"/>
+    <line x1="58" y1="138" x2="68" y2="138"/>
+    <line x1="78" y1="82" x2="84" y2="90"/>
+  </g>
+
+  <!-- Numbers -->
+  <text x="120" y="58" font-size="24" fill="#d32f2f" font-family="Arial" font-weight="bold">60</text>
+  <text x="182" y="144" font-size="20" fill="#333" font-family="Arial">15</text>
+  <text x="120" y="222" font-size="24" fill="#333" font-family="Arial">30</text>
+  <text x="42" y="144" font-size="20" fill="#333" font-family="Arial">45</text>
+
+  <!-- Center circles -->
+  <circle cx="128" cy="138" r="26" fill="#d7dee2" stroke="#5f6b73" stroke-width="3"/>
+  <circle cx="128" cy="138" r="7" fill="#e00000"/>
+
+  <!-- Needle -->
+  <line x1="128" y1="138" x2="128" y2="88" stroke="#e00000" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Bottom shadow -->
+  <ellipse cx="128" cy="230" rx="72" ry="12" fill="url(#gold)" opacity="0.7"/>
+</svg>

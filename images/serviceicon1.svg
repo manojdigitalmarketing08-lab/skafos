@@ -1,0 +1,29 @@
+<svg width="201" height="83" viewBox="0 0 201 83" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Icon 1 -->
+  <g transform="translate(10,10)" stroke="#111" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="17" cy="36" r="11"></circle>
+    <path d="M17 25V4"></path>
+    <path d="M12 10L17 4L22 10"></path>
+  </g>
+
+  <!-- Icon 2 -->
+  <g transform="translate(53,10)" stroke="#111" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="17" cy="36" r="11"></circle>
+    <path d="M24 16L36 4"></path>
+    <path d="M30 4H36V10"></path>
+  </g>
+
+  <!-- Icon 3 -->
+  <g transform="translate(96,10)" stroke="#111" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="17" cy="36" r="11"></circle>
+    <path d="M24 22C28 18 34 18 38 22"></path>
+    <path d="M34 18H38V22"></path>
+  </g>
+
+  <!-- Icon 4 -->
+  <g transform="translate(139,10)" stroke="#111" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="17" cy="36" r="11"></circle>
+    <path d="M26 32L38 44"></path>
+    <path d="M32 44H38V38"></path>
+  </g>
+</svg>

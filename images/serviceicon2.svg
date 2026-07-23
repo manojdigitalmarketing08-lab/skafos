@@ -1,0 +1,41 @@
+<svg width="120" height="160" viewBox="0 0 120 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+  
+  <!-- Left Kidney -->
+  <path d="M32 18
+           C20 18 14 28 14 40
+           C14 52 22 60 32 64
+           C40 68 48 62 50 54
+           C52 46 50 36 44 28
+           C40 22 36 18 32 18Z" fill="#5A0000"></path>
+
+  <!-- Right Kidney -->
+  <path d="M88 18
+           C100 18 106 28 106 40
+           C106 52 98 60 88 64
+           C80 68 72 62 70 54
+           C68 46 70 36 76 28
+           C80 22 84 18 88 18Z" fill="#5A0000"></path>
+
+  <!-- Ureters -->
+  <path d="M48 52
+           C52 70 50 86 44 102" stroke="#D40000" stroke-width="4" stroke-linecap="round"></path>
+
+  <path d="M72 52
+           C68 70 70 86 76 102" stroke="#D40000" stroke-width="4" stroke-linecap="round"></path>
+
+  <!-- Bladder -->
+  <path d="M40 104
+           C40 88 80 88 80 104
+           C80 122 72 132 60 132
+           C48 132 40 122 40 104Z" fill="#FF0000"></path>
+
+  <!-- Urethra -->
+  <path d="M60 132
+           C60 142 60 148 60 152" stroke="#E6A800" stroke-width="5" stroke-linecap="round"></path>
+
+  <!-- Drop -->
+  <path d="M60 150
+           C54 158 54 164 60 168
+           C66 164 66 158 60 150Z" fill="#F2B400"></path>
+
+</svg>

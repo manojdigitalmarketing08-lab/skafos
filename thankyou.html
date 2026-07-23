@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | Skafos Men's Wellness</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Thank you for contacting Skafos Aesthetic & Wellness Center. We provide advanced men's wellness, aesthetic care, urology, hormone optimization, fertility wellness, and reconstructive treatments with expert medical care and complete privacy.">
+    <meta name="keywords" content="Men's Wellness Clinic, Aesthetic & Wellness Center, Men's Health Care, Hormone Optimization, Fertility Wellness, Urology Specialist, Reconstructive Care, Wellness Treatments, Private Men's Clinic, Advanced Aesthetic Care">
+    <meta name="author" content="Skafos Aesthetic & Wellness Center">
+    <meta name="robots" content="noindex, follow">
+
+    <!-- Favicon Icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap Css -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <!-- Font Awesome Icon Css -->
+    <link href="css/all.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <!-- Animated Css -->
+    <link href="css/animate.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <!-- Main Custom Css -->
+    <link href="css/custom.css?v=2" rel="stylesheet" media="screen">
+
+    <style>
+        /* Thank You Page Specific Styles */
+        body {
+            background-color: #f9fbfd;
+            font-family: 'DM Sans', sans-serif;
+        }
+        .thankyou-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 30px 20px;
+            background-image: radial-gradient(circle at 10% 20%, rgba(26, 115, 94, 0.03) 0%, transparent 45%);
+        }
+        .thankyou-card {
+            background: #ffffff;
+            max-width: 700px;
+            width: 100%;
+            padding: 55px 45px;
+            border-radius: 25px;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.07);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(26, 115, 94, 0.08);
+        }
+        .thankyou-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #1a735e, #25D366, #1a735e);
+        }
+        .icon-circle {
+            background: #eaf6f2;
+            width: 95px;
+            height: 95px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 28px;
+            border: 2px solid #d4ede4;
+        }
+        .icon-circle i {
+            font-size: 48px;
+            color: #1a735e;
+        }
+        .thankyou-card h1 {
+            font-family: 'Archivo', sans-serif;
+            font-weight: 700;
+            font-size: 40px;
+            color: #1a1a1a;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
+        .thankyou-card .subtitle {
+            color: #4a5568;
+            font-size: 17px;
+            margin-bottom: 30px;
+            line-height: 1.7;
+            font-weight: 400;
+        }
+        .redirect-timer {
+            background: #f4f9f7;
+            padding: 16px 24px;
+            border-radius: 50px;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 35px;
+            border: 1px solid #e2efe9;
+            font-size: 15px;
+        }
+        .redirect-timer i {
+            color: #1a735e;
+            font-size: 18px;
+        }
+        .countdown-number {
+            background: #1a735e;
+            color: white;
+            padding: 4px 14px;
+            border-radius: 25px;
+            font-weight: 700;
+            margin-left: 5px;
+            display: inline-block;
+        }
+        .action-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        .btn-skafos {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 15px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 15px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-family: 'DM Sans', sans-serif;
+            letter-spacing: 0.3px;
+        }
+        .btn-primary-skafos {
+            background: #1a735e;
+            color: white;
+            box-shadow: 0 10px 20px rgba(26, 115, 94, 0.3);
+        }
+        .btn-primary-skafos:hover {
+            background: #145f4d;
+            transform: translateY(-3px);
+            box-shadow: 0 14px 25px rgba(26, 115, 94, 0.4);
+            color: white;
+        }
+        .btn-outline-skafos {
+            background: #fff;
+            color: #1a735e;
+            border: 1.5px solid #1a735e;
+        }
+        .btn-outline-skafos:hover {
+            background: #f5fbf9;
+            transform: translateY(-2px);
+            color: #145f4d;
+        }
+        .btn-whatsapp-skafos {
+            background: #25D366;
+            color: white;
+            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.35);
+        }
+        .btn-whatsapp-skafos:hover {
+            background: #1da851;
+            transform: translateY(-3px);
+            box-shadow: 0 14px 25px rgba(37, 211, 102, 0.5);
+            color: white;
+        }
+        .treatments-links {
+            margin-top: 35px;
+            padding-top: 30px;
+            border-top: 1px solid #edf2f0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+        .treatments-links a {
+            color: #4a5568;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: 0.2s;
+            padding: 6px 14px;
+            border-radius: 20px;
+            background: #f7faf9;
+            border: 1px solid transparent;
+        }
+        .treatments-links a:hover {
+            color: #1a735e;
+            background: #eaf6f2;
+            border-color: #d0e8df;
+        }
+        .treatments-links i {
+            font-size: 13px;
+            color: #1a735e;
+        }
+        .floating-contact {
+            position: fixed;
+            right: 20px;
+            bottom: 30px;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .contact-btn {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            color: #fff;
+            text-decoration: none;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        .whatsapp {
+            background: #25D366;
+            animation: floatY 3s ease-in-out infinite;
+        }
+        .call {
+            background: #E53935;
+            animation: floatY 3s ease-in-out infinite;
+            animation-delay: 1s;
+        }
+        .instagram {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            animation: floatY 3s ease-in-out infinite;
+            animation-delay: 2s;
+        }
+        .contact-btn:hover {
+            transform: scale(1.15);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+        }
+        @keyframes floatY {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-6px); }
+            100% { transform: translateY(0); }
+        }
+        @media (max-width: 600px) {
+            .thankyou-card {
+                padding: 35px 25px;
+            }
+            .thankyou-card h1 {
+                font-size: 32px;
+            }
+            .action-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            .btn-skafos {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Floating Contact Buttons (WhatsApp, Instagram, Call) -->
+    <div class="floating-contact">
+        <a href="https://wa.me/917305512199" target="_blank" class="contact-btn whatsapp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://www.instagram.com/skafosaesthetics/" target="_blank" class="contact-btn instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="tel:+917305512199" class="contact-btn call">
+            <i class="fas fa-phone"></i>
+        </a>
+    </div>
+
+    <!-- Thank You Card Section -->
+    <div class="thankyou-wrapper">
+        <div class="thankyou-card wow fadeInUp" data-wow-duration="0.8s">
+            <!-- Success Icon -->
+            <div class="icon-circle">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            
+            <h1>Thank You!</h1>
+            <p class="subtitle">
+                Your message has been received. Our team at <strong>Skafos Men's Wellness</strong> will review your inquiry and get back to you shortly.
+            </p>
+            
+            <!-- Countdown Timer -->
+            <div class="redirect-timer">
+                <i class="fas fa-redo-alt"></i>
+                <span>Redirecting to Contact Page in <span class="countdown-number" id="timerDisplay">08</span> sec</span>
+            </div>
+            
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+                <a href="contact.html" class="btn-skafos btn-primary-skafos"><i class="fas fa-arrow-left"></i> Back to Contact</a>
+                <a href="index.html" class="btn-skafos btn-outline-skafos"><i class="fas fa-home"></i> Home Page</a>
+                <a href="https://wa.me/917305512199?text=Hello%20Skafos%20Men's%20Wellness%2C%20I%20just%20submitted%20an%20inquiry%20and%20would%20like%20to%20chat." target="_blank" class="btn-skafos btn-whatsapp-skafos">
+                    <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                </a>
+            </div>
+            
+            <!-- Treatments Quick Links (matches UI design) -->
+            <div class="treatments-links">
+                <a href="services.html"><i class="fas fa-stethoscope"></i> All Treatments</a>
+                <a href="services.html"><i class="fas fa-male"></i> Men's Intimate Care</a>
+                <a href="services.html"><i class="fas fa-bolt"></i> Stamina & Control</a>
+                <a href="services.html"><i class="fas fa-flask"></i> Hormone Optimization</a>
+                <a href="services.html"><i class="fas fa-baby"></i> Fertility Wellness</a>
+            </div>
+            <div style="margin-top: 20px; font-size: 13px; color: #718096;">
+                <a href="services.html" style="color: #1a735e; text-decoration: none; font-weight: 500;">Bladder & Prostate Wellness</a> · 
+                <a href="services.html" style="color: #1a735e; text-decoration: none; font-weight: 500;">Reconstructive & Enhancement</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Jquery Library File -->
+    <script src="js/jquery-3.7.1.min.js" defer></script>
+    <!-- Bootstrap js file -->
+    <script src="js/bootstrap.min.js" defer></script>
+    <!-- Wow js file -->
+    <script src="js/wow.js" defer></script>
+    <script>
+        // Initialize WOW animations
+        new WOW().init();
+
+        // Countdown redirect timer
+        let secondsLeft = 8;
+        const timerElement = document.getElementById('timerDisplay');
+        
+        const countdownInterval = setInterval(() => {
+            secondsLeft--;
+            if (secondsLeft >= 0) {
+                timerElement.textContent = secondsLeft < 10 ? '0' + secondsLeft : secondsLeft;
+            }
+            if (secondsLeft <= 0) {
+                clearInterval(countdownInterval);
+                // Redirect to contact page after countdown
+                window.location.href = 'contact.html';
+            }
+        }, 1000);
+
+        // Optional: If user clicks any button, they navigate away, timer stops naturally.
+        console.log('Skafos Men\'s Wellness - Thank You Page Loaded');
+    </script>
+</body>
+</html>
