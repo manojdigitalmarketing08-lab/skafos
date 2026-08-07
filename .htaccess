@@ -1,0 +1,33 @@
+# Skafos Men's Wellness — clean URL rewriting
+# Serves extensionless URLs (e.g. /about/) from the existing .html files,
+# and 301-redirects the old .html URLs to their clean equivalent so each
+# page has exactly one indexable, canonical URL.
+
+RewriteEngine On
+
+# Never touch the Google Search Console verification file — it must stay
+# reachable at its exact, literal URL.
+RewriteCond %{REQUEST_URI} !^/google3985c133298ed19b\.html$
+
+# 1) /index.html or /index -> / (root)
+RewriteCond %{THE_REQUEST} \s/+index(\.html)?[\s?] [NC]
+RewriteRule ^ /? [R=301,L]
+
+# 2) /page.html -> /page/  (redirect the old .html URL to the clean one)
+RewriteCond %{REQUEST_URI} !^/google3985c133298ed19b\.html$
+RewriteCond %{THE_REQUEST} \s/+([^.\s]+)\.html[\s?] [NC]
+RewriteRule ^ /%1/ [R=301,L]
+
+# 3) /page (no trailing slash) -> /page/  (only when page.html exists)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+RewriteRule ^([^/]+)$ /$1/ [R=301,L]
+
+# 4) Internally serve page.html for the clean /page/ URL (no visible redirect)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+RewriteRule ^([^/]+)/$ $1.html [L]
+
+DirectoryIndex index.html
