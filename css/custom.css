@@ -3981,14 +3981,19 @@ header.main-header .header-sticky.active{
     box-shadow: none;
 }
 
-.google-map .container-fluid{
-	padding: 0;
+.google-map{
+	padding: 0 0 100px;
+}
+
+.google-map-iframe{
+	border-radius: 20px;
+	overflow: hidden;
 }
 
 .google-map-iframe,
 .google-map-iframe iframe{
 	width: 100%;
-	height: 730px;
+	height: 450px;
 }
 
 /***************************************/
@@ -4814,7 +4819,7 @@ header.main-header .header-sticky.active{
 
 	.google-map-iframe,
 	.google-map-iframe iframe{
-		height: 530px;
+		height: 400px;
 	}
 
 	.page-book-appointment{
@@ -5338,7 +5343,7 @@ header.main-header .header-sticky.active{
 
 	.google-map-iframe,
 	.google-map-iframe iframe{
-		height: 330px;
+		height: 300px;
 	}
 
 	.page-book-appointment .book-appointment-form{
@@ -6140,5 +6145,552 @@ header.main-header .header-sticky.active{
 @media (max-width: 767px){
 	.myths-facts-row{
 		grid-template-columns: 1fr;
+	}
+}
+
+/* Hero lead form */
+.hero-lead-form{
+	background: var(--white-color);
+	border-radius: 20px;
+	padding: 28px 26px;
+	box-shadow: 0 20px 50px rgba(11, 31, 51, 0.18);
+	text-align: left;
+	pointer-events: auto;
+}
+
+.hero-lead-form h2{
+	font-size: 24px;
+	line-height: 1.25;
+	margin: 0 0 6px;
+	color: var(--primary-color);
+}
+
+.hero-lead-form p{
+	font-size: 15px;
+	margin: 0 0 18px;
+	color: var(--primary-color);
+}
+
+.hero-lead-form input[type="text"],
+.hero-lead-form input[type="tel"],
+.hero-lead-form select{
+	display: block;
+	width: 100%;
+	height: 50px;
+	padding: 0 16px;
+	margin-bottom: 12px;
+	font-size: 16px;
+	color: var(--primary-color);
+	background: #fff;
+	border: 1px solid var(--dark-divider-color);
+	border-radius: 10px;
+	box-shadow: none;
+}
+
+.hero-lead-form input:focus,
+.hero-lead-form select:focus{
+	outline: none;
+	border-color: var(--accent-color);
+}
+
+.hero-lead-form .hlf-hp{
+	position: absolute;
+	left: -9999px;
+	width: 1px;
+	height: 1px;
+	opacity: 0;
+}
+
+.hero-lead-form .btn-default{
+	width: 100%;
+	margin-top: 4px;
+}
+
+.hero-lead-form .hlf-note{
+	display: block;
+	margin-top: 10px;
+	text-align: center;
+	color: var(--primary-color);
+	opacity: .7;
+}
+
+.hero-form-overlay{
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 3;
+	display: flex;
+	align-items: center;
+	pointer-events: none;
+}
+
+.hero-form-overlay .container{
+	pointer-events: none;
+}
+
+@media (min-width: 992px){
+	.hero.hero-slider .hero-slide .container{
+		padding-right: 360px;
+	}
+}
+
+@media (max-width: 991px){
+	.hero-form-overlay{
+		position: static;
+		padding: 30px 0 40px;
+		background: var(--secondary-color);
+	}
+}
+
+/* Hero lead form: styled service dropdown */
+.hero-lead-form select{
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	cursor: pointer;
+	padding-right: 44px;
+	background-color: #fff;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9' fill='none'%3E%3Cpath d='M1 1.5l6 6 6-6' stroke='%230F766E' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	background-position: right 18px center;
+	transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+.hero-lead-form select:hover{
+	border-color: var(--accent-color);
+}
+
+.hero-lead-form select:focus{
+	border-color: var(--accent-color);
+	box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.15);
+}
+
+.hero-lead-form select:invalid{
+	color: #6b7785;
+}
+
+.hero-lead-form select option{
+	color: var(--primary-color);
+	background: #fff;
+	padding: 10px 16px;
+}
+
+/* Hero lead form: custom dropdown (replaces native popup) */
+.hero-lead-form .hlf-select{
+	position: relative;
+	margin-bottom: 12px;
+}
+
+.hero-lead-form .hlf-select select.hlf-native{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	opacity: 0;
+	pointer-events: none;
+}
+
+.hero-lead-form .hlf-select-btn{
+	display: block;
+	width: 100%;
+	height: 50px;
+	padding: 0 44px 0 16px;
+	text-align: left;
+	font-family: inherit;
+	font-size: 16px;
+	color: var(--primary-color);
+	background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9' fill='none'%3E%3Cpath d='M1 1.5l6 6 6-6' stroke='%230F766E' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat right 18px center;
+	border: 1px solid var(--dark-divider-color);
+	border-radius: 10px;
+	cursor: pointer;
+	transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+.hero-lead-form .hlf-select-btn.is-placeholder{
+	color: #6b7785;
+}
+
+.hero-lead-form .hlf-select-btn:hover,
+.hero-lead-form .hlf-select.is-open .hlf-select-btn,
+.hero-lead-form .hlf-select-btn:focus{
+	outline: none;
+	border-color: var(--accent-color);
+}
+
+.hero-lead-form .hlf-select.is-open .hlf-select-btn{
+	box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.15);
+}
+
+.hero-lead-form .hlf-select-list{
+	display: none;
+	position: absolute;
+	top: calc(100% + 6px);
+	left: 0;
+	right: 0;
+	z-index: 30;
+	max-height: 250px;
+	overflow-y: auto;
+	margin: 0;
+	padding: 8px;
+	list-style: none;
+	background: #fff;
+	border: 1px solid var(--dark-divider-color);
+	border-radius: 14px;
+	box-shadow: 0 16px 40px rgba(11, 31, 51, 0.18);
+}
+
+.hero-lead-form .hlf-select.is-open .hlf-select-list{
+	display: block;
+}
+
+.hero-lead-form .hlf-select-list li{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 11px 14px;
+	margin: 0;
+	font-size: 15px;
+	color: var(--primary-color);
+	border-radius: 8px;
+	cursor: pointer;
+	transition: background-color .15s ease, color .15s ease;
+}
+
+.hero-lead-form .hlf-select-list li:hover,
+.hero-lead-form .hlf-select-list li.is-active{
+	background: rgba(15, 118, 110, 0.1);
+	color: var(--accent-color);
+}
+
+.hero-lead-form .hlf-select-list li.is-selected{
+	background: var(--accent-color);
+	color: #fff;
+	font-weight: 600;
+}
+
+/* Hero lead form: 2 x 2 field grid */
+.hero-lead-form form{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 12px;
+}
+
+.hero-lead-form form input[type="text"],
+.hero-lead-form form input[type="tel"],
+.hero-lead-form .hlf-select{
+	margin-bottom: 0;
+}
+
+.hero-lead-form form .btn-default,
+.hero-lead-form form .hlf-note{
+	grid-column: 1 / -1;
+}
+
+.hero-lead-form form .btn-default{
+	margin-top: 4px;
+}
+
+.hero-lead-form form .hlf-note{
+	margin-top: 0;
+}
+
+@media (max-width: 575px){
+	.hero-lead-form form{
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (min-width: 992px){
+	.hero-form-overlay .hero-lead-form{
+		max-width: 470px;
+		margin-left: auto;
+	}
+	.hero.hero-slider .hero-slide .container{
+		padding-right: 490px;
+	}
+}
+
+.hero-lead-form .hlf-select-btn{
+	line-height: 48px;
+	padding-right: 38px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+@media (min-width: 576px){
+	.hero-lead-form .hlf-select-btn{
+		font-size: 15px;
+		background-position: right 14px center;
+	}
+}
+
+.hero-lead-form input.hlf-date,
+.hero-lead-form input[type="date"]{
+	display: block;
+	width: 100%;
+	height: 50px;
+	padding: 0 14px 0 16px;
+	margin-bottom: 0;
+	font-family: inherit;
+	font-size: 15px;
+	color: var(--primary-color);
+	background: #fff;
+	border: 1px solid var(--dark-divider-color);
+	border-radius: 10px;
+	box-shadow: none;
+}
+
+.hero-lead-form input[type="date"]::-webkit-calendar-picker-indicator{
+	cursor: pointer;
+	opacity: .7;
+}
+
+/* Hero lead form: softer, less boxy shape */
+.hero-lead-form{
+	border-radius: 28px;
+	padding: 24px 26px 20px;
+}
+
+.hero-lead-form p{
+	margin-bottom: 14px;
+}
+
+.hero-lead-form form input[type="text"],
+.hero-lead-form form input[type="tel"],
+.hero-lead-form input.hlf-date,
+.hero-lead-form input[type="date"],
+.hero-lead-form .hlf-select-btn{
+	height: 46px;
+	border-radius: 50px;
+	padding-left: 20px;
+}
+
+.hero-lead-form .hlf-select-btn{
+	line-height: 44px;
+}
+
+.hero-lead-form .hlf-select-list{
+	border-radius: 20px;
+}
+
+.hero-lead-form .hlf-select-list li{
+	border-radius: 50px;
+}
+
+/* Hero lead form: tall portrait card, one field per row */
+.hero-lead-form{
+	max-width: 380px;
+	padding: 30px 28px 24px;
+}
+
+.hero-lead-form form{
+	grid-template-columns: 1fr !important;
+	gap: 14px;
+}
+
+.hero-lead-form form input[type="text"],
+.hero-lead-form form input[type="tel"],
+.hero-lead-form input.hlf-date,
+.hero-lead-form input[type="date"],
+.hero-lead-form .hlf-select-btn{
+	height: 50px;
+}
+
+.hero-lead-form .hlf-select-btn{
+	line-height: 48px;
+	font-size: 16px;
+}
+
+@media (min-width: 992px){
+	.hero-lead-form{
+		margin-left: auto;
+	}
+	.hero.hero-slider .hero-slide .container{
+		padding-right: 410px;
+	}
+}
+
+/* Hero lead form: 2 columns x 3 rows, tall card */
+.hero-lead-form{
+	max-width: 480px;
+	padding: 34px 30px 28px;
+}
+
+.hero-lead-form form{
+	gap: 18px 14px;
+}
+
+.hero-lead-form form input[type="text"],
+.hero-lead-form form input[type="tel"],
+.hero-lead-form input.hlf-date,
+.hero-lead-form input[type="date"],
+.hero-lead-form .hlf-select-btn{
+	height: 54px;
+}
+
+.hero-lead-form .hlf-select-btn{
+	line-height: 52px;
+	font-size: 15px;
+}
+
+@media (min-width: 576px){
+	.hero-lead-form form{
+		grid-template-columns: 1fr 1fr !important;
+	}
+}
+
+@media (min-width: 992px){
+	.hero.hero-slider .hero-slide .container{
+		padding-right: 510px;
+	}
+}
+
+/* Hero content aligned left */
+.hero.hero-slider{
+	text-align: left;
+}
+
+.hero.hero-slider .hero-slider-layout .hero-slide .hero-content{
+	margin-left: 0;
+	margin-right: auto;
+}
+
+.hero.hero-slider .hero-content .hero-content-body{
+	text-align: left;
+}
+
+/* Home hero: force left alignment (beats .hero.bg-image .hero-content and the mobile centre rules) */
+.hero.hero-slider .hero-slide,
+.hero.bg-image .hero-content,
+.hero.bg-image .hero-content .section-title,
+.hero.bg-image .hero-content .section-title h1,
+.hero.bg-image .hero-content .section-title p,
+.hero.hero-slider .hero-content-body{
+	text-align: left !important;
+}
+
+.hero.hero-slider .hero-content-body{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	gap: 16px 24px;
+}
+
+.hero.hero-slider .hero-content-body .btn-default.btn-highlighted{
+	margin-left: 0;
+}
+
+/* Home hero: tighter gap between the lead paragraph and the CTA buttons */
+.hero.hero-slider .hero-content .section-title{
+	min-height: 0;
+	margin-bottom: 0;
+}
+
+.hero.hero-slider .hero-slider-layout .hero-slide .hero-content{
+	min-height: 0;
+}
+
+.hero.hero-slider .hero-content .hero-content-body{
+	margin-top: 24px;
+	padding-bottom: 0;
+	margin-bottom: 0;
+	border-bottom: 0;
+}
+
+/* Hero lead form: polish */
+.hero-lead-form{
+	position: relative;
+	border: 1px solid rgba(255, 255, 255, 0.6);
+	box-shadow: 0 30px 70px rgba(11, 31, 51, 0.28);
+}
+
+.hero-lead-form::before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 34px;
+	right: 34px;
+	height: 5px;
+	border-radius: 0 0 6px 6px;
+	background: linear-gradient(90deg, var(--accent-color), #2dd4bf);
+}
+
+.hero-lead-form .hlf-badge{
+	display: inline-block;
+	margin-bottom: 12px;
+	padding: 6px 14px;
+	font-size: 11px;
+	font-weight: 700;
+	letter-spacing: 1.2px;
+	text-transform: uppercase;
+	color: var(--accent-color);
+	background: rgba(15, 118, 110, 0.1);
+	border-radius: 50px;
+}
+
+.hero-lead-form h2{
+	font-size: 26px;
+}
+
+/* Home hero: breathing room on the left, soft scrim for text legibility, keep card clear of the floating contact buttons */
+@media (min-width: 992px){
+	.hero.hero-slider .hero-slide .container{
+		padding-left: 45px;
+	}
+}
+
+.hero-slider-layout .hero-slide::after{
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+	background: linear-gradient(90deg, rgba(11, 31, 51, 0.55) 0%, rgba(11, 31, 51, 0) 65%);
+	pointer-events: none;
+}
+
+.hero-slider-layout .hero-slide .container{
+	position: relative;
+	z-index: 2;
+}
+
+@media (min-width: 992px) and (max-width: 1499px){
+	.hero-form-overlay .container{
+		padding-right: 100px;
+	}
+}
+
+@media (min-width: 992px) and (max-width: 1499px){
+	.hero.hero-slider .hero-slide .container{
+		padding-right: 620px;
+	}
+}
+
+
+
+
+/* About section: "More About" button sizes to its text */
+.about-us-footer .appointment-btn{
+	width: auto;
+	text-align: left;
+}
+
+.about-us-footer .appointment-btn .btn-default{
+	display: inline-block;
+	width: auto;
+	text-align: left;
+	padding-left: 34px;
+}
+
+@media (min-width: 576px){
+	.about-us-footer .appointment-btn .btn-default{
+		white-space: nowrap;
 	}
 }

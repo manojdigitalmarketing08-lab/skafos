@@ -1,0 +1,38 @@
+<div class="hero-lead-form">
+    <h2>Book a Confidential Consultation</h2>
+    <p>Leave your details and our team will call you back.</p>
+    <form action="hero-lead.php" method="post" id="heroLeadForm" novalidate>
+        <input type="text" name="name" placeholder="Your Name" autocomplete="name" required>
+        <input type="tel" name="phone" placeholder="Mobile Number" autocomplete="tel" inputmode="tel" pattern="[0-9+ ]{10,15}" required>
+        <select name="service" required>
+            <option value="">Select Service</option>
+            <option>Erectile Dysfunction</option>
+            <option>Premature Ejaculation</option>
+            <option>Male Infertility</option>
+            <option>Low Testosterone</option>
+            <option>Circumcision</option>
+            <option>Kidney Stones</option>
+            <option>Other</option>
+        </select>
+        <input type="text" name="location" placeholder="Your Area / City" autocomplete="address-level2">
+        <input type="text" name="visit_date" class="hlf-date" placeholder="Preferred Date" autocomplete="off">
+        <select name="visit_time">
+            <option value="">Preferred Time</option>
+            <option>9 AM - 11 AM</option>
+            <option>11 AM - 1 PM</option>
+            <option>2 PM - 4 PM</option>
+            <option>4 PM - 6 PM</option>
+            <option>6 PM - 8 PM</option>
+        </select>
+        <input type="text" name="website" class="hlf-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <input type="hidden" name="page_url" value="">
+        <input type="hidden" name="page_title" value="">
+        <input type="hidden" name="landing_page" value="">
+        <input type="hidden" name="referrer" value="">
+        <input type="hidden" name="utm_source" value="">
+        <input type="hidden" name="utm_medium" value="">
+        <input type="hidden" name="utm_campaign" value="">
+        <button type="submit" class="btn-default">Request Call Back</button>
+        <small class="hlf-note">100% private. No spam.</small>
+    </form>
+</div>
