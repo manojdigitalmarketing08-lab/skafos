@@ -1410,6 +1410,235 @@ header.main-header .header-sticky.active{
 	background-color: var(--text-color);
 }
 
+/* Modern service card refresh */
+.service-item{
+	border-width: 1px;
+	border-radius: 20px;
+	box-shadow: 0 4px 18px rgba(12, 39, 72, 0.05);
+	transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.service-item:hover{
+	transform: translateY(-6px);
+	box-shadow: 0 16px 32px rgba(12, 39, 72, 0.14);
+}
+
+.service-item .icon-box{
+	width: 72px;
+	height: 72px;
+	border-radius: 16px;
+	padding: 14px;
+	box-sizing: border-box;
+}
+
+.service-item .icon-box img{
+	max-width: 100%;
+	max-height: 100%;
+	width: auto;
+	height: auto;
+	object-fit: contain;
+}
+
+.service-item .icon-box i{
+	position: relative;
+	z-index: 1;
+	font-size: 30px;
+	color: var(--primary-color);
+	transition: color 0.5s ease-in-out;
+}
+
+.service-item:hover .icon-box i{
+	color: var(--white-color);
+}
+
+/* Icon-boxes built from an icon font (vs. the theme's default <img> icons)
+   keep their sweep translucent on hover so a white icon stays visible,
+   instead of the theme's opaque white sweep meant to sit behind dark <img> icons */
+.service-item .icon-box:has(i)::before{
+	background-color: rgba(255, 255, 255, 0.16);
+}
+
+.service-item:hover .icon-box:has(i){
+	background-color: var(--accent-color);
+}
+
+.service-item .service-body h3{
+	font-size: 19px;
+	margin-bottom: 12px;
+}
+
+.service-item .service-body p{
+	font-size: 15px;
+	line-height: 1.7;
+}
+
+/* Modern text-link CTA — replaces the pill button inside service cards so
+   longer, descriptive anchor text never wraps inside a circular button */
+.service-item .appointment-btn{
+	margin-top: 4px;
+}
+
+.card-cta-link{
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	font-family: var(--accent-font);
+	font-size: 14.5px;
+	font-weight: 600;
+	line-height: 1.2;
+	color: var(--primary-color);
+	text-decoration: none;
+	white-space: nowrap;
+	padding: 11px 18px;
+	border: 1.5px solid var(--dark-divider-color);
+	border-radius: 8px;
+	transition: all 0.3s ease-in-out;
+}
+
+.card-cta-link .cta-arrow{
+	transition: transform 0.3s ease-in-out;
+}
+
+.card-cta-link:hover{
+	background-color: var(--primary-color);
+	border-color: var(--primary-color);
+	color: var(--white-color);
+}
+
+.card-cta-link:hover .cta-arrow{
+	transform: translateX(4px);
+}
+
+.service-item:hover .card-cta-link{
+	border-color: var(--white-color);
+	color: var(--white-color);
+}
+
+.service-item:hover .card-cta-link:hover{
+	background-color: var(--white-color);
+	color: var(--primary-color);
+}
+
+@media (max-width: 480px){
+	.card-cta-link{
+		width: 100%;
+		justify-content: center;
+	}
+}
+
+/* Compact, single-row treatments carousel — keeps the whole section
+   (heading + all treatments) inside roughly one viewport height */
+.our-service{
+	padding: 60px 0;
+}
+
+.our-service .section-title{
+	margin-bottom: 30px;
+}
+
+.service-slider{
+	position: relative;
+}
+
+.service-slider .swiper{
+	padding-bottom: 50px;
+	overflow: hidden;
+}
+
+.service-slider .swiper-slide{
+	height: auto;
+}
+
+.service-slider .service-item{
+	padding: 24px;
+	height: 100%;
+}
+
+.service-slider .icon-box{
+	width: 60px;
+	height: 60px;
+	border-radius: 14px;
+	padding: 12px;
+	margin-bottom: 16px;
+}
+
+.service-slider .icon-box i{
+	font-size: 24px;
+}
+
+.service-slider .service-body h3{
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+
+.service-slider .service-body p{
+	font-size: 14.5px;
+	line-height: 1.6;
+	display: -webkit-box;
+	-webkit-line-clamp: 4;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+
+.service-slider .swiper-pagination{
+	bottom: 0;
+}
+
+.service-slider .swiper-pagination-bullet{
+	background: var(--dark-divider-color);
+	opacity: 1;
+	width: 8px;
+	height: 8px;
+}
+
+.service-slider .swiper-pagination-bullet-active{
+	background: var(--primary-color);
+	width: 22px;
+	border-radius: 4px;
+}
+
+.service-slider-nav{
+	display: flex;
+	justify-content: center;
+	gap: 14px;
+	margin-top: 6px;
+}
+
+.service-slider-prev,
+.service-slider-next{
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	border: 1.5px solid var(--dark-divider-color);
+	background: var(--white-color);
+	color: var(--primary-color);
+	font-size: 18px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+}
+
+.service-slider-prev:hover,
+.service-slider-next:hover{
+	background: var(--primary-color);
+	border-color: var(--primary-color);
+	color: var(--white-color);
+}
+
+.service-slider-prev.swiper-button-disabled,
+.service-slider-next.swiper-button-disabled{
+	opacity: 0.35;
+	cursor: default;
+}
+
+@media (max-width: 767px){
+	.our-service{
+		padding: 40px 0;
+	}
+}
+
 .service-cta-item{
 	padding: 40px 100px;
 	text-align: center;
@@ -5724,4 +5953,192 @@ header.main-header .header-sticky.active{
 	top: 0;
 	left: 100%;
 	margin-left: 6px;
+}
+
+/************************************/
+/***  Home: New Content Sections  ***/
+/************************************/
+
+.specialist-guide,
+.conditions-treated,
+.myths-facts{
+	padding: 60px 0;
+}
+
+.conditions-treated{
+	background-color: #f6f9fb;
+}
+
+/* Specialist Guide */
+
+.specialist-guide-list{
+	max-width: 980px;
+	margin: 0 auto;
+	border: 1px solid var(--dark-divider-color);
+	border-radius: 20px;
+	overflow: hidden;
+	background: var(--white-color);
+}
+
+.specialist-guide-row{
+	display: flex;
+	align-items: center;
+	gap: 24px;
+	padding: 22px 28px;
+	transition: background-color 0.3s ease-in-out;
+}
+
+.specialist-guide-row:not(:last-child){
+	border-bottom: 1px solid var(--dark-divider-color);
+}
+
+.specialist-guide-row:hover{
+	background-color: #f6f9fb;
+}
+
+.specialist-guide-symptom{
+	flex: 1 1 0;
+	font-size: 15.5px;
+	color: var(--text-color);
+}
+
+.specialist-guide-arrow{
+	flex: 0 0 auto;
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	background: var(--secondary-color);
+	color: var(--primary-color);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 13px;
+}
+
+.specialist-guide-result{
+	flex: 1 1 0;
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+
+.specialist-guide-name{
+	font-weight: 700;
+	color: var(--accent-color);
+	font-size: 15.5px;
+}
+
+.specialist-guide-reason{
+	font-size: 14px;
+	color: var(--text-color);
+	line-height: 1.6;
+}
+
+.specialist-guide-note{
+	margin-top: 28px;
+	font-size: 15px;
+	line-height: 1.7;
+	color: var(--text-color);
+}
+
+@media (max-width: 767px){
+	.specialist-guide-row{
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 10px;
+	}
+
+	.specialist-guide-arrow{
+		transform: rotate(90deg);
+	}
+}
+
+/* Conditions We Treat */
+
+.conditions-chip-grid{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 12px;
+	max-width: 980px;
+	margin: 0 auto;
+}
+
+.condition-chip{
+	display: inline-flex;
+	align-items: center;
+	padding: 10px 20px;
+	border-radius: 99px;
+	border: 1.5px solid var(--dark-divider-color);
+	background: var(--white-color);
+	color: var(--primary-color);
+	font-size: 14.5px;
+	font-weight: 600;
+	white-space: nowrap;
+	transition: all 0.3s ease-in-out;
+	cursor: default;
+}
+
+.condition-chip:hover{
+	background: var(--accent-color);
+	border-color: var(--accent-color);
+	color: var(--white-color);
+}
+
+/* Myths vs Facts */
+
+.myths-facts-list{
+	max-width: 1000px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.myths-facts-row{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 16px;
+}
+
+.myth-box,
+.fact-box{
+	display: flex;
+	align-items: flex-start;
+	gap: 14px;
+	padding: 20px 22px;
+	border-radius: 16px;
+	font-size: 14.5px;
+	line-height: 1.6;
+}
+
+.myth-box{
+	background: #fdf2f2;
+	color: #7a3030;
+}
+
+.myth-box i{
+	color: #c14b4b;
+	margin-top: 3px;
+}
+
+.fact-box{
+	background: #eef8f6;
+	color: #14453f;
+}
+
+.fact-box i{
+	color: var(--accent-color);
+	margin-top: 3px;
+}
+
+.myth-box p,
+.fact-box p{
+	margin: 0;
+}
+
+@media (max-width: 767px){
+	.myths-facts-row{
+		grid-template-columns: 1fr;
+	}
 }
