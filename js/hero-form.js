@@ -22,12 +22,32 @@
         enhanceSelect(form.visit_time);
         setupDate(form.visit_date);
 
+        var T = window.SkafosTracking, started = false;
+        form.addEventListener('focusin', function () {
+            if (!started && T) { started = true; T.track('hero_form_start', { form_name: 'hero-form' }); }
+        });
+
         form.addEventListener('submit', function (e) {
             var phone = form.phone.value.replace(/[^0-9]/g, '');
             if (!form.name.value.trim() || phone.length < 10 || !form.service.value) {
                 e.preventDefault();
                 alert('Please enter your name, a valid mobile number and select a service.');
+                return;
             }
+            /* Valid: remember a summary for the success page (no phone number is stored or sent to analytics). */
+            try {
+                sessionStorage.setItem('skafos_lead', JSON.stringify({
+                    name: form.name.value.trim(),
+                    service: form.service.value,
+                    location: form.location.value.trim(),
+                    visit_date: form.visit_date.value,
+                    visit_time: form.visit_time.value,
+                    page_url: form.page_url.value,
+                    page_path: location.pathname,
+                    tracked: false
+                }));
+            } catch (err) {}
+            if (T) T.track('hero_form_submit', { form_name: 'hero-form', service: form.service.value });
         });
     };
     xhr.onerror = function () { console.error('Failed to load hero-form.html'); };
@@ -80,6 +100,7 @@
     function enhanceSelect(select) {
         var wrap = document.createElement('div');
         wrap.className = 'hlf-select';
+        if (select.name === 'visit_time') wrap.className += ' hlf-align-right'; /* opens leftwards so it stays inside the card */
         select.parentNode.insertBefore(wrap, select);
         wrap.appendChild(select);
         select.classList.add('hlf-native');

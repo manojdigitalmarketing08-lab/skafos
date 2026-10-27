@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquiry Received | Skafos Men's Wellness</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Your enquiry has been received. The Skafos Men's Wellness team will contact you shortly.">
+    <meta name="author" content="Skafos Men's Wellness">
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- Favicon Icon -->
+    <link rel="icon" type="image/webp" href="images/skafos-fav.webp">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap Css -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <!-- Font Awesome Icon Css -->
+    <link href="css/all.css" rel="stylesheet" media="screen">
+    <!-- Animated Css -->
+    <link href="css/animate.css" rel="stylesheet">
+    <!-- Main Custom Css -->
+    <link href="css/custom.css?v=2" rel="stylesheet" media="screen">
+
+    <style>
+        /* Thank You Page Specific Styles */
+        body {
+            background-color: #f9fbfd;
+            font-family: 'DM Sans', sans-serif;
+        }
+        .thankyou-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 30px 20px;
+            background-image: radial-gradient(circle at 10% 20%, rgba(26, 115, 94, 0.03) 0%, transparent 45%);
+        }
+        .thankyou-card {
+            background: #ffffff;
+            max-width: 700px;
+            width: 100%;
+            padding: 55px 45px;
+            border-radius: 25px;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.07);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(26, 115, 94, 0.08);
+        }
+        .thankyou-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #1a735e, #25D366, #1a735e);
+        }
+        .icon-circle {
+            background: #eaf6f2;
+            width: 95px;
+            height: 95px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 28px;
+            border: 2px solid #d4ede4;
+        }
+        .icon-circle i {
+            font-size: 48px;
+            color: #1a735e;
+        }
+        .thankyou-card h1 {
+            font-family: 'Archivo', sans-serif;
+            font-weight: 700;
+            font-size: 40px;
+            color: #1a1a1a;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
+        .thankyou-card .subtitle {
+            color: #4a5568;
+            font-size: 17px;
+            margin-bottom: 30px;
+            line-height: 1.7;
+            font-weight: 400;
+        }
+        .redirect-timer {
+            background: #f4f9f7;
+            padding: 16px 24px;
+            border-radius: 50px;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 35px;
+            border: 1px solid #e2efe9;
+            font-size: 15px;
+        }
+        .redirect-timer i {
+            color: #1a735e;
+            font-size: 18px;
+        }
+        .countdown-number {
+            background: #1a735e;
+            color: white;
+            padding: 4px 14px;
+            border-radius: 25px;
+            font-weight: 700;
+            margin-left: 5px;
+            display: inline-block;
+        }
+        .action-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        .btn-skafos {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 15px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 15px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-family: 'DM Sans', sans-serif;
+            letter-spacing: 0.3px;
+        }
+        .btn-primary-skafos {
+            background: #1a735e;
+            color: white;
+            box-shadow: 0 10px 20px rgba(26, 115, 94, 0.3);
+        }
+        .btn-primary-skafos:hover {
+            background: #145f4d;
+            transform: translateY(-3px);
+            box-shadow: 0 14px 25px rgba(26, 115, 94, 0.4);
+            color: white;
+        }
+        .btn-outline-skafos {
+            background: #fff;
+            color: #1a735e;
+            border: 1.5px solid #1a735e;
+        }
+        .btn-outline-skafos:hover {
+            background: #f5fbf9;
+            transform: translateY(-2px);
+            color: #145f4d;
+        }
+        .btn-whatsapp-skafos {
+            background: #25D366;
+            color: white;
+            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.35);
+        }
+        .btn-whatsapp-skafos:hover {
+            background: #1da851;
+            transform: translateY(-3px);
+            box-shadow: 0 14px 25px rgba(37, 211, 102, 0.5);
+            color: white;
+        }
+        .treatments-links {
+            margin-top: 35px;
+            padding-top: 30px;
+            border-top: 1px solid #edf2f0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+        .treatments-links a {
+            color: #4a5568;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: 0.2s;
+            padding: 6px 14px;
+            border-radius: 20px;
+            background: #f7faf9;
+            border: 1px solid transparent;
+        }
+        .treatments-links a:hover {
+            color: #1a735e;
+            background: #eaf6f2;
+            border-color: #d0e8df;
+        }
+        .treatments-links i {
+            font-size: 13px;
+            color: #1a735e;
+        }
+        .floating-contact {
+            position: fixed;
+            right: 20px;
+            bottom: 30px;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .contact-btn {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            color: #fff;
+            text-decoration: none;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        .whatsapp {
+            background: #25D366;
+            animation: floatY 3s ease-in-out infinite;
+        }
+        .call {
+            background: #E53935;
+            animation: floatY 3s ease-in-out infinite;
+            animation-delay: 1s;
+        }
+        .instagram {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            animation: floatY 3s ease-in-out infinite;
+            animation-delay: 2s;
+        }
+        .contact-btn:hover {
+            transform: scale(1.15);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+        }
+        @keyframes floatY {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-6px); }
+            100% { transform: translateY(0); }
+        }
+        @media (max-width: 600px) {
+            .thankyou-card {
+                padding: 35px 25px;
+            }
+            .thankyou-card h1 {
+                font-size: 32px;
+            }
+            .action-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            .btn-skafos {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        .lead-summary { background:#f1f8f6; border:1px solid rgba(26,115,94,.15); border-radius:14px; padding:14px 18px; margin:0 auto 22px; max-width:480px; font-size:15px; color:#2d3748; }
+        .lead-summary strong { display:block; color:#1a735e; font-size:12px; letter-spacing:1px; text-transform:uppercase; margin-bottom:4px; }
+        .steps { text-align:left; max-width:480px; margin:0 auto 26px; padding:0; list-style:none; counter-reset:step; }
+        .steps li { position:relative; padding:8px 0 8px 42px; font-size:15px; color:#4a5568; text-align:left; }
+        .steps li::before { counter-increment:step; content:counter(step); position:absolute; left:0; top:6px; width:28px; height:28px; border-radius:50%; background:#1a735e; color:#fff; font-weight:700; font-size:14px; display:flex; align-items:center; justify-content:center; }
+        .wa-cancel { color:#1a735e; font-weight:600; text-decoration:underline; margin-left:6px; }
+    </style>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-79GRCQBQ2X"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-79GRCQBQ2X');
+    </script>
+</head>
+<body>
+
+    <!-- Floating Contact Buttons (WhatsApp, Instagram, Call) -->
+    <div class="floating-contact">
+        <a href="https://wa.me/917305512199" target="_blank" class="contact-btn whatsapp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://www.instagram.com/skafosmenswellness/" target="_blank" class="contact-btn instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="tel:+917305512199" class="contact-btn call">
+            <i class="fas fa-phone"></i>
+        </a>
+    </div>
+
+    <!-- Enquiry Success Card -->
+    <div class="thankyou-wrapper">
+        <div class="thankyou-card wow fadeInUp" data-wow-duration="0.8s">
+            <div class="icon-circle">
+                <i class="fas fa-check-circle"></i>
+            </div>
+
+            <h1>Thank you<span id="leadName"></span>!</h1>
+            <p class="subtitle">
+                Your enquiry has been received by <strong>Skafos Men's Wellness</strong>. Your details are confidential and will only be used to contact you about your consultation.
+            </p>
+
+            <div class="lead-summary" id="leadSummaryBox" style="display:none;">
+                <strong>Your enquiry</strong>
+                <span id="leadSummary"></span>
+            </div>
+
+            <ul class="steps">
+                <li>Our team reviews your request.</li>
+                <li>We call you on the number you shared, at your preferred time where possible.</li>
+                <li>You get a private consultation with the right specialist.</li>
+            </ul>
+
+            <div class="redirect-timer" id="waTimer" style="display:none;">
+                <i class="fab fa-whatsapp"></i>
+                <span>Opening WhatsApp in <span class="countdown-number" id="waCountdown">06</span> sec
+                    <a href="#" class="wa-cancel" id="waCancel">Cancel</a></span>
+            </div>
+
+            <div class="action-buttons">
+                <a href="#" id="waContinue" target="_blank" rel="noopener" class="btn-skafos btn-whatsapp-skafos">
+                    <i class="fab fa-whatsapp"></i> Continue on WhatsApp
+                </a>
+                <a href="tel:+917305512199" class="btn-skafos btn-primary-skafos"><i class="fas fa-phone"></i> Call Us</a>
+                <a href="index.html" class="btn-skafos btn-outline-skafos"><i class="fas fa-home"></i> Home Page</a>
+            </div>
+
+            <div style="margin-top:18px;font-size:14px;">
+                <a href="services.html" style="color:#1a735e;text-decoration:none;font-weight:500;">Explore all treatments</a>
+                <a href="index.html" id="backLink" style="display:none;color:#1a735e;text-decoration:none;font-weight:500;margin-left:14px;">&larr; Back to the page you were on</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Jquery Library File -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap js file -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Wow js file -->
+    <script src="js/wow.js"></script>
+    <script>new WOW().init();</script>
+    <script src="js/lead-tracking.js"></script>
+    <script src="js/enquiry-success.js"></script>
+</body>
+</html>
